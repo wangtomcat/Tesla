@@ -72,7 +72,7 @@ html,body {
 }
 
 #footer {
-    margin-top: 60px;
+    /* margin-top: 60px; */
     height: 400px;
     background: #222222;
     text-align: center;
