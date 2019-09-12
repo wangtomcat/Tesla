@@ -21,7 +21,7 @@ function load(){
                         <td>${results[i].stuta}</td>
                         <td class="text-center">
                             <button id="resinfo_edit" class="btn btn-primary btn-xs">
-                            <span class="glyphicon glyphicon-ok"></span> 完成</button>
+                            <span class="glyphicon glyphicon-ok"></span> 处理</button>
                             <button class="btn btn-danger btn-xs">
                             <span id="resinfo_delete" class="glyphicon glyphicon-remove"></span> 删除</button>
                         </td>
@@ -39,7 +39,7 @@ $('#resinfo_list').on('click','#resinfo_edit',function(){
         url: "http://localhost:3000/resinfoEdit",
         data: {
             name: $(this).parent().parent().children().eq(0).text(),
-            stuta: "已完成",
+            stuta: "已处理",
         },
         success: function (data) {
             console.log(data);

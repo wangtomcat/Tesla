@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+app.use(express.static('static'))
 
 var mysql = require('mysql');
 
@@ -62,7 +63,9 @@ app.get('/resinfoEdit', function (req, res) {
     connection.end(); // 关闭数据库
 
 });
-
+//获取app文件夹下的所有静态资源
+app.use('/', express.static('../../'));
+//监听端口
 app.listen(3000);
 
 //连接数据库
