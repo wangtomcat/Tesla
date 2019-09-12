@@ -29,8 +29,8 @@
 
         <!-- 在此处写内容 -->
 
-        <div id="img1">
-            <div class="img1contenttop">
+        <div id="k_img1">
+            <div class="k_img1contenttop">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img
@@ -50,40 +50,42 @@
                 </div>
 
             </div>
-            <div class="img1contentmid">
+            <div class="k_img1contentmid">
                 <h1>出色的安全和性能表现</h1>
                 <p>Model S 自诞生之日起就是为了成为一款安全、高性能的轿车而设计。得益于特斯拉独特的纯电动动力总成，Model S 的性能表现十分出色，0-100公里/小时加速最快仅需 2.6 秒。通过
                     Autopilot 自动辅助驾驶，Model S 还可以使高速公路驾驶更为安全且轻松，让你更好的享受驾驶乐趣。</p>
 
             </div>
 
-            <div class="img1contentbtm">
+            <div class="k_img1contentbtm">
 
 
             </div>
 
         </div>
 
-        <div id="img2">
-            <div class="contenttop img2intro">
+        <div id="k_img2">
+            <div class="k_contenttop k_img2intro">
                 <h1>电动全轮驱动</h1>
                 <img src="https://www.tesla.cn/tesla_theme/assets/img/models/v1.0/chassis-explorer/chassis-motor-dual@2x.jpg?20170420"
                     alt="">
-
+                <div class="k_carchange">
+                    <i>长续航版</i><em>Performance 高性能版</em>
+                </div>
             </div>
 
-            <div class="contentbtm">
+            <div class="k_contentbtm">
             </div>
 
         </div>
 
 
 
-        <div id="img3">
-            <div class="contenttop">
+        <div id="k_img3">
+            <div class="k_contenttop">
             </div>
 
-            <div class="contentbtm">
+            <div class="k_contentbtm">
 
             </div>
         </div>
@@ -127,9 +129,9 @@
         $('#wrap').scroll(function () {
             // console.log($(this).scrollTop());
             // console.log(this.scrollHeight);
-            $('#img1').css('backgroundPosition', '0 ' + ($(this).scrollTop() / this.scrollHeight) * 80 + 'px');
-            $('#img2').css('backgroundPosition', '0 ' + ($(this).scrollTop() / this.scrollHeight) * 80 + 'px');
-            $('#img3').css('backgroundPosition', '0 ' + ($(this).scrollTop() / this.scrollHeight) * 80 + 'px');
+            $('#k_img1').css('backgroundPosition', '0 ' + ($(this).scrollTop() / this.scrollHeight) * 80 + 'px');
+            $('#k_img2').css('backgroundPosition', '0 ' + ($(this).scrollTop() / this.scrollHeight) * 80 + 'px');
+            $('#k_img3').css('backgroundPosition', '0 ' + ($(this).scrollTop() / this.scrollHeight) * 80 + 'px');
 
         })
     </script>
