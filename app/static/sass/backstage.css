@@ -23,12 +23,28 @@
     color: #fff;
     font-size: 40px;
 }
+.w_topRight{
+    text-align: center;
+    line-height: 104px;
+
+}
+.w_topRight span{
+    color: #fff;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.w_topRight .w_exit{
+    cursor: pointer;
+}
+.w_topRight .w_exit:hover{
+    color: bisque;
+}
 
 /* 底部 */
 .w_bottom .w_left {
     /* background-color: #434a52; */
     padding: 0;
-    height: 680px;
+    height: 685px;
     border-right: 1px solid #ccc;
 }
 
@@ -67,5 +83,5 @@
     margin-top: 10px;
 }
 iframe{
-    min-height: 300px;
+    min-height: 600px;
 }

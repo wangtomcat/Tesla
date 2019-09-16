@@ -1,21 +1,33 @@
 (function(){
-    // $('.w_left li a').eq(0).addClass('w_active');
-    // console.log($('.w_left li a'));
+
+    $('.w_topRight span').eq(0).text(getCookie('adminuser'));
     if(getCookie('w_pre')){
         $('.w_left li a').eq(getCookie('w_pre')).addClass('w_active');
+        $('iframe').attr('src',$('.w_left li a').eq(getCookie('w_pre')).attr('href'));
+        // console.log($('iframe').attr('src'));
+        
     }else{
         setCookie('w_pre','0');
         $('.w_left li a').eq(getCookie('w_pre')).addClass('w_active');
+        $('iframe').attr('src',$('.w_left li a').eq(getCookie('w_pre')).attr('href'));
+        // console.log($('iframe').attr('src'));                
+        
     }  
     for(let i = 0;i<$('.w_left li a').length;i++){
         $('.w_left li a').eq(i).click(function(){
-            console.log(i);
+            // console.log(i);
             $('.w_left li a').eq(getCookie('w_pre')).removeClass('w_active');
-            console.log(getCookie('w_pre'));
+            // console.log(getCookie('w_pre'));
             $('.w_left li a').eq(i).addClass('w_active');
             setCookie('w_pre',i);
-        })
+        });
     }
+
+    $('.w_exit').click(function(){
+        removeCookie('adminuser');
+        window.open('./adminlogin.html','_self');
+    });
+
 
     //获取cookie
     function getCookie(key){
