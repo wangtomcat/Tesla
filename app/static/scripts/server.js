@@ -1,13 +1,13 @@
 var express = require('express');
 var app = express();
-app.use(express.static('static'))
+app.use(express.static('static'));
 
 var mysql = require('mysql');
 
 
 // 用户信息
 app.get('/orduser', function (req, res) {
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -26,7 +26,7 @@ app.get('/orduser', function (req, res) {
 //搜索用户
 app.get('/orduserDelete', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -46,7 +46,7 @@ app.get('/orduserDelete', function (req, res) {
 //删除用户
 app.get('/orduserDelete', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -66,7 +66,7 @@ app.get('/orduserDelete', function (req, res) {
 //查询用户名是否重名
 app.get('/reorduser', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -86,7 +86,7 @@ app.get('/reorduser', function (req, res) {
 //添加用户
 app.get('/addorduser', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -108,7 +108,7 @@ app.get('/addorduser', function (req, res) {
 //修改用户
 app.get('/editorduser', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -130,7 +130,7 @@ app.get('/editorduser', function (req, res) {
 //预约信息
 app.get('/resinfo', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -149,7 +149,7 @@ app.get('/resinfo', function (req, res) {
 //改变预约信息状态
 app.get('/resinfoEdit', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -171,7 +171,7 @@ app.get('/resinfoEdit', function (req, res) {
 //购车订单
 app.get('/buycar', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -190,7 +190,7 @@ app.get('/buycar', function (req, res) {
 //改变购车订单状态
 app.get('/buycarEdit', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -212,7 +212,7 @@ app.get('/buycarEdit', function (req, res) {
 //删除购车订单
 app.get('/buycarDelete', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -233,7 +233,7 @@ app.get('/buycarDelete', function (req, res) {
 //意见信息
 app.get('/proposal', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -252,7 +252,7 @@ app.get('/proposal', function (req, res) {
 //改变意见信息状态
 app.get('/proposalDelete', function (req, res) {
     console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -272,7 +272,7 @@ app.get('/proposalDelete', function (req, res) {
 //登录后台
 app.get('/adminlogin', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -293,7 +293,7 @@ app.get('/adminlogin', function (req, res) {
 //管理员用户信息
 app.get('/admuser', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -312,7 +312,7 @@ app.get('/admuser', function (req, res) {
 //搜索用户
 app.get('/admuserDelete', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -332,7 +332,7 @@ app.get('/admuserDelete', function (req, res) {
 //删除管理员用户
 app.get('/admuserDelete', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -352,7 +352,7 @@ app.get('/admuserDelete', function (req, res) {
 //添加用户时查询是否重名
 app.get('/readmuser', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -372,7 +372,7 @@ app.get('/readmuser', function (req, res) {
 //添加用户
 app.get('/addadmuser', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -393,7 +393,7 @@ app.get('/addadmuser', function (req, res) {
 //修改用户
 app.get('/editamduser', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -416,7 +416,7 @@ app.get('/editamduser', function (req, res) {
 //添加预约信息
 app.get('/information', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -439,7 +439,7 @@ app.get('/information', function (req, res) {
 //前端登录
 app.get('/ordlogin', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -460,7 +460,7 @@ app.get('/ordlogin', function (req, res) {
 //添加论坛信息
 app.get('/forum', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -482,7 +482,7 @@ app.get('/forum', function (req, res) {
 //注册普通用户
 app.get('/register', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -504,7 +504,7 @@ app.get('/register', function (req, res) {
 //注册，查询是否有重名
 app.get('/repregister', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
@@ -525,7 +525,7 @@ app.get('/repregister', function (req, res) {
 //购车订单添加
 app.get('/cars', function (req, res) {
     // console.log(req.query);
-    res.append("Access-Control-Allow-Origin", "*")
+    res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接
     // 执行sql语句
