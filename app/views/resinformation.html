@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TESLA非官方网站</title>
+    <link rel="stylesheet" href="../static/sass/moban.css">
+    <link rel="stylesheet" href="../static/sass/resinformation.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=iByfk3nGEoPUIxi2fe9yiPc988sE5FpB"></script>
+
+</head>
+
+<body>
+    <!-- 容器 -->
+    <div id="wrap">
+        <!-- 头部 -->
+        <div id="header">
+            <a href="index.html"> <img src="../static/images/logo.png" alt=""></a>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="vehicleType.html">车型</a></li>
+                <li><a href="forum.html">论坛</a></li>
+            </ul>
+            <p><a href="register.html">注册</a> <a id="login">登陆</a></p>
+        </div>
+
+        <div id="k_login">
+            <div class="k_loginbox">
+                <h2>登陆</h2>
+                <hr>
+                <span class="k_wrong_info"></span>
+                <input type="text" class="k_index_login_name" placeholder="用户名">
+                <input type="password" class="k_index_login_pass" placeholder="密码">
+                <input type="submit" class="k_index_login_submit" value="登陆">
+                <a href="register.html" class="k_index_new">注册一个新用户</a>
+
+            </div>
+        </div>
+
+        <!-- 在此处写内容 -->
+
+        <div class="k_register">
+            <div class="k_register_left">
+                <div class="k_information">
+                    <h2>预约试驾</h2>
+                    <hr>
+
+                    <input type="text" class="k_name" name="name" placeholder="姓名">
+                    <select class="k_sex">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                    <input type="text" class="k_phone" name="phone" placeholder="电话号码">
+                    <div id="r-result"><input type="text" class="k_address"  id="suggestId" name="address" placeholder="购车城市"></div>
+                    <input type="submit" value="立即预约" id="k_submit">
+                </div>
+            </div>
+
+            <div class="k_register_right">
+                <div id="l-map">
+
+                </div>
+                <div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 尾部 -->
+        <div id="footer">
+            <img src="../static/images/logo.png" alt="">
+        </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
+    <script src="../static/scripts/moban.js"></script>
+    <script src="../static/scripts/resinformation.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
