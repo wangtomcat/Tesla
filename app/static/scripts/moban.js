@@ -3,23 +3,24 @@
 if (!getCookie('index-show')) {
     setCookie('index-show', 'index');
     $('#index').addClass('show');
-}else{
-    $( '#' + getCookie('index-show')).addClass('show');
+} else {
+    $('#' + getCookie('index-show')).addClass('show');
 }
 
 
 
-$('#header ul li a').each(function (index, value) {
-    $(value).click(function () {
+$('#header ul li a').each(function(index, value) {
+    $(value).click(function() {
         // console.log( getCookie('index-show'));
-        $('#'+getCookie('index-show')).removeClass('show');
+        $('#' + getCookie('index-show')).removeClass('show');
         $(value).addClass('show');
         setCookie('index-show', $(value).attr('id'));
     });
 });
 
-if(getCookie('orduser')){
-    $('#login').text('你好，'+ getCookie('orduser'));
+if (getCookie('orduser')) {
+    $('#login').text('你好，' + getCookie('orduser'));
+    $('#reg').css('display', 'none');
 }
 
 
@@ -49,11 +50,19 @@ function getCookie(key) {
 
 //login
 
-$('#login').click(function () {
+$('#login').click(function() {
+    console.log(getCookie('orduser'));
+
+    if (getCookie('orduser')) {
+        return;
+    }
+
+    // console.log(2);
     $('#k_login').css('display', 'block');
+
 });
 
-$('.k_index_login_submit').click(function () {
+$('.k_index_login_submit').click(function() {
     // console.log($('.k_index_login_name').val(), $('.k_index_login_pass').val());
 
     if (!$('.k_index_login_name').val()) {
@@ -72,13 +81,13 @@ $('.k_index_login_submit').click(function () {
             username: $('.k_index_login_name').val(),
             password: $('.k_index_login_pass').val()
         },
-        success: function (data) {
+        success: function(data) {
             var res = data.results;
             if (res[0]) {
                 setCookie('orduser', res[0].username);
                 $('#k_login').css('display', 'none');
-                $('#login').text("你好，"+ res[0].username);
-
+                $('#login').text("你好，" + res[0].username);
+                $('#reg').css('display', 'none');
             } else {
                 $('.k_wrong_info').text('登陆失败，您提供的信息不正确。请重试。');
                 $('.k_wrong_info').css('display', 'block');

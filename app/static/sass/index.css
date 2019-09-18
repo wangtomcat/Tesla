@@ -1,27 +1,28 @@
-#k_img1 {
+#wrap {
+    overflow-x: hidden;
+}
 
+#k_img1 {
     min-height: 100px;
-    background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1568040757251&di=280dbc6eb323862b5af5bf3d238b0db9&imgtype=0&src=http%3A%2F%2Fimg1.99114.com%2Fgroup10%2FM00%2FFA%2F65%2FrBADs1l6w2mAAO3sAAK1ZHCU1JM492.jpg);
+    background: url(https://www.tesla.cn/tesla_theme/assets/img/modelx/slideshow/CN_GB/Steering_Wheel_Detail-1440.jpg?20170816);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    /* background-position: 0 50px; */
+    background-position: -100px 0;
     box-sizing: border-box;
     position: relative;
-
 }
 
-
-#k_login{
+#k_login {
     height: 100%;
     width: 100%;
-    background: rgba(0,0,0,0.4); 
+    background: rgba(0, 0, 0, 0.4);
     position: fixed;
-    z-index: 999;   
+    z-index: 999;
     display: none;
-
 }
-#k_login .k_loginbox{
+
+#k_login .k_loginbox {
     height: 360px;
     width: 600px;
     background-color: #eeeeee;
@@ -37,19 +38,20 @@
     overflow: hidden;
 }
 
-#k_login .k_loginbox h2{
+#k_login .k_loginbox h2 {
     font-weight: normal;
     color: #666;
 }
-#k_login .k_loginbox hr{
-    border-bottom:1px solid #ddd;
+
+#k_login .k_loginbox hr {
+    border-bottom: 1px solid #ddd;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-#k_login .k_loginbox input{
+#k_login .k_loginbox input {
     height: 40px;
-    width:520px;
+    width: 520px;
     display: block;
     font-size: 16px;
     box-sizing: border-box;
@@ -60,42 +62,42 @@
     border: none;
     outline: none;
 }
-#k_login .k_loginbox  .k_wrong_info{
-    color:#cc0000;
+
+#k_login .k_loginbox .k_wrong_info {
+    color: #cc0000;
     font-size: 12px;
     font-weight: normal;
     display: none;
 }
 
-#k_login .k_loginbox input.k_index_login_submit{
+#k_login .k_loginbox input.k_index_login_submit {
     margin-top: 30px;
     background-color: #3e6be2;
     color: white;
     cursor: pointer;
 }
 
-#k_login .k_loginbox .k_index_new{
+#k_login .k_loginbox .k_index_new {
     display: block;
     color: #3e6be2;
     font-size: 12px;
     width: 100%;
     line-height: 40px;
     background: white;
-    position:absolute;
+    position: absolute;
     left: 0;
     bottom: 0;
 }
-#k_img2 {
 
+#k_img2 {
     min-height: 1000px;
-    background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1568042856850&di=88d79b1d9cae76bb8f2c1a36da12a8a4&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2017-12-19%2F5a38d9234697a.jpg);
+    background: url(https://www.tesla.cn/tesla_theme/assets/img/modelx/slideshow/CN_GB/Ski-1440.jpg?20170816);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     /* background-position: 0 50px; */
     box-sizing: border-box;
     position: relative;
-
 }
 
 #k_img3 {
@@ -107,17 +109,17 @@
     /* background-position: -200 -500px; */
     box-sizing: border-box;
     position: relative;
-
 }
 
-#k_img3 h1{
+#k_img3 h1 {
     font-size: 40px;
     font-weight: normal;
     word-spacing: 10px;
     text-align: center;
     line-height: 180px;
 }
-#k_img3 p{
+
+#k_img3 p {
     width: 52%;
     margin-left: 24%;
     margin-right: 24%;
@@ -129,21 +131,21 @@
     top: -40px;
 }
 
-#k_img3 .k_img3yuyue{
+#k_img3 .k_img3yuyue {
     height: 400px;
 }
 
-#k_img3 div{
+#k_img3 div {
     width: 100%;
     text-align: center;
     margin-top: 30px;
 }
-#k_img3 div a{
+
+#k_img3 div a {
     padding: 10px 30px;
     background-color: #cc0000;
     color: white;
     font-size: 16px;
-    
 }
 
 .k_contenttop {
@@ -154,7 +156,6 @@
     /* background-position: 0 50px; */
     box-sizing: border-box;
     position: relative;
-
 }
 
 .k_contentbtm {
@@ -164,7 +165,6 @@
     /* background-position: 0 50px; */
     box-sizing: border-box;
     position: relative;
-
 }
 
 .k_img1contenttop {
@@ -177,7 +177,19 @@
     position: relative;
 }
 
-.k_img1contenttop img{
+.k_img1contenttop video {
+    /* position: fixed; */
+    /* right: 0;
+    bottom: 0; */
+    /* top: 20px; */
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    /* z-index: -100;  */
+}
+
+.k_img1contenttop img {
     width: 100%;
 }
 
@@ -191,17 +203,17 @@
     position: relative;
 }
 
-.k_img1contentmid div{
+.k_img1contentmid div {
     width: 100%;
     text-align: center;
     margin-top: 30px;
 }
-.k_img1contentmid div a{
+
+.k_img1contentmid div a {
     padding: 10px 30px;
     background-color: #cc0000;
     color: white;
     font-size: 16px;
-    
 }
 
 .k_img1contentmid h1 {
@@ -231,7 +243,6 @@
     /* background-position: 0 50px; */
     box-sizing: border-box;
     position: relative;
-
 }
 
 .k_img2intro h1 {
@@ -250,9 +261,7 @@
     width: 100%;
 }
 
-
-
-#k_img2 .k_carchange{
+#k_img2 .k_carchange {
     height: 60px;
     text-align: center;
     font-size: 16px;
@@ -261,7 +270,7 @@
     cursor: pointer;
 }
 
-#k_img2 .k_carchange i{
+#k_img2 .k_carchange i {
     font-style: normal;
     padding: 20px 115px;
     border: 1px solid #ddd;
@@ -269,10 +278,9 @@
     background: #f7f7f7;
 }
 
-#k_img2 .k_carchange em{
+#k_img2 .k_carchange em {
     font-style: normal;
     padding: 20px 62px;
     border: 1px solid #ddd;
-    border-radius:0 30px  30px 0;
-
+    border-radius: 0 30px 30px 0;
 }

@@ -2,9 +2,9 @@
     $('#wrap').scroll(function () {
         // console.log($(this).scrollTop());
         // console.log(this.scrollHeight);
-        $('#k_img1').css('backgroundPosition', '0 ' + ($(this).scrollTop() / this.scrollHeight) * 60 +
+        $('#k_img1').css('backgroundPosition', '0 ' + ($(this).scrollTop() / this.scrollHeight) * 120 +
             'px');
-        $('#k_img2').css('backgroundPosition', '0 ' + ($(this).scrollTop() / this.scrollHeight) * 60 +
+        $('#k_img2').css('backgroundPosition', '0 ' + ($(this).scrollTop() / this.scrollHeight) * 90 +
             'px');
         $('#k_img3').css('backgroundPosition', '0 ' + ($(this).scrollTop() / this.scrollHeight) * 60 +
             'px');
@@ -30,43 +30,6 @@
 
     });
 
-    $('#login').click(function () {
-        $('#k_login').css('display', 'block');
-    });
-
-    $('.k_index_login_submit').click(function () {
-        // console.log($('.k_index_login_name').val(), $('.k_index_login_pass').val());
-
-        if (!$('.k_index_login_name').val()) {
-            $('.k_wrong_info').text('用户名不能为空');
-            $('.k_wrong_info').css('display', 'block')
-        };
-        if (!$('.k_index_login_pass').val()) {
-            $('.k_wrong_info').text('密码不能为空');
-            $('.k_wrong_info').css('display', 'block');
-        };
-
-        $.ajax({
-            type: "GET",
-            url: "http://localhost:3000/ordlogin",
-            data: {
-                username: $('.k_index_login_name').val(),
-                password: $('.k_index_login_pass').val()
-            },
-            success: function (data) {
-                var res = data.results;
-                if (res[0]) {
-                    setCookie('orduser', res[0].username);
-                    $('#k_login').css('display', 'none');
-                    $('#login').text("你好，" + res[0].username);
-
-                } else {
-                    $('.k_wrong_info').text('登陆失败，您提供的信息不正确。请重试。');
-                    $('.k_wrong_info').css('display', 'block');
-                }
-            }
-        });
-    });
 
 
     // console.log(getCookie('index-show'));
@@ -81,7 +44,6 @@
             document.cookie = key + '=' + escape(value) + '; expires=' + d;
         } else {
             document.cookie = key + '=' + escape(value);
-            console.log(1);
         }
     }
 

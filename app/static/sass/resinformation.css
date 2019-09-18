@@ -6,18 +6,29 @@ html{
 
 .k_register{
     height: 1000px;
-    background: url(https://www.tesla.com/ns_videos/hp_2019/main-hero-desktop.jpg) no-repeat;
+    /* background: url(https://www.tesla.com/ns_videos/hp_2019/main-hero-desktop.jpg) no-repeat; */
     overflow: hidden;
-    background-position: center;
-    background-size: cover;
+    /* background-position: center;
+    background-size: cover; */
     box-sizing: border-box;
     padding-top: 80px;
 }
-
+.k_register video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto; 
+    z-index: -100; 
+    /* -webkit-filter: grayscale(20%); */
+}
 .k_register .k_register_left{
     float: left;
     height: 100%;
     width: 50%;
+
 }
 .k_register .k_register_left .k_information{
     height: 600px;
@@ -94,4 +105,55 @@ html{
     height: 100%;
     width: 50%;
 
+}
+
+.k_info_extend{
+    height: 900px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.k_info_extend h2{
+    font-weight: normal;
+    color: white;
+    font: normal 400 36px/50px "Gotham Medium",serif;
+}
+.k_info_extend .k_info_extend_about{
+    width: 60%;
+    height: 500px;
+    margin-top:  140px ;
+    margin-left: 20%;
+    color: white;
+    box-sizing: border-box;
+    padding: 0 0 0 10%;
+    font-weight: 16px;
+/* border: 1px solid #000; */
+}
+.k_info_extend .k_info_extend_about ul {
+    display: block;
+    overflow: hidden;
+}
+.k_info_extend .k_info_extend_about ul li{
+    font-size: 15px;
+    float: left;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.k_info_extend .k_info_extend_about p{
+    margin-top: 50px;
+    font-size: 18px;
+    text-align: left;
+    line-height: 40px;
+}
+.k_info_extend .k_info_extend_tit{
+    text-align: left;
+    margin-top: 250px;
+    font: normal 400 36px/50px "Gotham Medium",serif;
+    font-size: 30px;
+}
+
+.k_inf_show{
+    color: #ff2a2a;
 }
