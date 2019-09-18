@@ -1,0 +1,626 @@
+#lxcarType{
+    margin-top: 70px;
+    position: relative;
+    text-align: center;
+    span::before{
+        content: '';
+        width: 650px;
+        height: 1px;
+        // color: red;
+        background:  #e1e1e1;
+        position: absolute;
+        left: -650px;
+        z-index: 1;
+        top: 25px;
+    }
+    span{
+        transform: scaleX(0.7);
+        transform-origin: center;
+        max-width: 940px;
+        margin: auto;
+        width: auto;
+        display: inline-block;
+        padding: 0 14px;
+        position: relative;
+        z-index: 2;
+        color: #666;
+        font: normal 400 36px/50px "SimSun",serif;
+    }
+    span::after{
+        content: '';
+        width: 650px;
+        height: 1px;
+        background:  #e1e1e1;
+        position: absolute;
+        right: -650px;
+        z-index: 1;
+        top: 25px;
+        display: inline-block;
+    }
+}
+
+
+#_lxcar{
+    width: 100%;
+    height: 400px;
+    // background: red;
+    margin-top: 20px;
+    .box{
+        height: 400px;
+        width: 944px;
+        margin: 0 auto;
+        background: url('../images/_lx_tou3.jpg');
+        background-size: cover;
+        ul{
+            li{
+                height: 400px;
+                width: 235px;
+                float: left;
+                border-right: 1px solid #fff;
+                position: relative;
+                a{
+                    padding: 0 200px 360px 0;
+                    span{
+                        width: 32px;
+                        height: 32px;
+                        text-align: center;
+                        line-height: 32px;
+                        border: 1px solid #fff;
+                        border-radius: 50%;
+                        font-size: 15px;
+                        display: block;
+                        position: absolute;
+                        right:101.5px;
+                        top: 300px;
+                    }
+                    em{
+                        display: inline-block;
+                        font-style: normal;
+                        font-size: 20px;
+                        font-weight: 400;
+                        position: absolute;
+                        right:96.5px;
+                        top: 350px;
+
+                    }
+                    .span{
+                        width: 32px;
+                        height: 32px;
+                        background: #fff;
+                        text-align: center;
+                        line-height: 32px;
+                        border: 1px solid #fff;
+                        border-radius: 50%;
+                        font-size: 15px;
+                        color: #000000;
+                        display: block;
+                        position: absolute;
+                        right:101.5px;
+                        top: 270px;
+                    }
+                    .em{
+                        display: inline-block;
+                        font-style: normal;
+                        font-size: 20px;
+                        font-weight: 400;
+                        position: absolute;
+                        right:96.5px;
+                        top: 320px;
+                    }
+                    
+                }
+                
+            }
+            li:hover{
+                background: rgba(0, 0, 0, 0.38);
+            }
+            
+            .noBorder{
+                border: none;
+            }
+        }
+    }
+}
+
+
+
+#lxbuyCar{
+    margin-top: 70px;
+    position: relative;
+    text-align: center;
+    span::before{
+        content: '';
+        width: 650px;
+        height: 1px;
+        background:  #e1e1e1;
+        position: absolute;
+        left: -650px;
+        z-index: 1;
+        top: 25px;
+    }
+    span{
+        transform: scaleX(0.7);
+        transform-origin: center;
+        max-width: 940px;
+        margin: auto;
+        width: auto;
+        display: inline-block;
+        padding: 0 14px;
+        position: relative;
+        z-index: 2;
+        // background:  #e1e1e1;        
+        font: normal 400 36px/50px "SimSun",serif;
+    }
+    span::after{
+        content: '';
+        width: 650px;
+        height: 1px;
+        background:  #e1e1e1;
+        position: absolute;
+        right: -650px;
+        z-index: 1;
+        top: 25px;
+        display: inline-block;
+    }
+}
+
+#iconfont{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    .tool{
+        width: 890px;
+        height: 96px;
+        margin: 0 208px;
+        // background: pink;
+        div{
+            width: 220px;
+            height: 42px;
+            float: left;
+            // background: #666;
+            margin-right: 1px;
+            text-align: center;
+            position: relative;
+            a{
+                padding: 0 220px 96px 0;
+                position: absolute;
+                span{
+                    position: absolute;
+                    font-size: 45px;
+                    right: 89px;
+                    top: 10px;
+                    z-index: 2;
+                    color: #666666;
+                }
+                div{
+                    position: absolute;
+                    top: 71px;
+                    right: -2px;
+                    color: #333333;
+                    
+                }
+            }
+        }
+    }
+}
+
+
+
+#findmore{
+    margin-top: 70px;
+    position: relative;
+    text-align: center;
+    span::before{
+        content: '';
+        width: 650px;
+        height: 1px;
+        background:  #e1e1e1;
+        position: absolute;
+        left: -650px;
+        z-index: 1;
+        top: 25px;
+    }
+    span{
+        transform: scaleX(0.7);
+        transform-origin: center;
+        max-width: 940px;
+        margin: auto;
+        width: auto;
+        display: inline-block;
+        padding: 0 14px;
+        position: relative;
+        z-index: 2;
+        color: #666;
+        font: normal 400 36px/50px "SimSun",serif;
+        margin-bottom: 30px;
+    }
+    span::after{
+        content: '';
+        width: 650px;
+        height: 1px;
+        background:  #e1e1e1;
+        position: absolute;
+        right: -650px;
+        z-index: 1;
+        top: 25px;
+        display: inline-block;
+    }
+    .pic{
+        margin-top: 30px;
+        background: url('../images/_lx_find.jpg');
+        background-size: cover;
+        width: 940px;
+        height: 300px;
+        margin: 0 auto;
+        p{
+            font: normal 400 36px/1 "SimSun",serif;
+            color: #fff;
+            position: absolute;
+            top: 174px;
+            left: 413px;
+        }
+        .out{
+            display: none;
+            overflow: hidden;
+            p{
+                font: normal 400 36px/1 "SimSun",serif;
+                color: #fff;
+                top: 127px;
+                left: 318px;
+            }
+            em{
+                position: absolute;
+                top: 260px;
+                left: 321px;
+                font-size: 16px;
+                color: #fff;
+                font-style: normal;
+                color: #000000;
+            }
+        }
+
+    }
+    .pic:hover{
+        background:url('../images/_lx_try.jpg');
+        background-size: cover;
+        cursor: pointer;
+        transition: 2s;
+    }
+    .pic:hover .out{
+        display: block;
+        transition: 2s;
+    }
+    .pic:hover .in{
+        display: none;
+        transition: 2s;
+    }
+
+}
+
+
+
+/* joinUs */
+
+#lxjoinUs{
+
+    width: 940px;
+    height: 300px;
+    margin:50px auto;
+    position: relative;
+    .left{
+        width: 620px;
+        height: 300px;
+        margin-right: 8px;
+        float: left;
+        img{
+            width: 620px;
+            height: 300px;
+        }
+        p{
+            font-size: 26px;
+            color: #fff;
+            position: absolute;
+            top: 125px;
+            left: 66px;
+            span{
+                font-size: 40px;
+                position: absolute;
+                top: 54px;
+                left: 1px;
+            }
+        }
+    }
+    .left:hover p{
+        display: none;
+    }
+    .leftban{
+        width: 620px;
+        height: 300px;
+        position: absolute;
+        // background: pink;
+    }
+    .leftban:hover{
+        background: rgba(0, 0, 0, 0.38);
+        cursor: pointer;
+        transition: 1s;
+
+    }
+    .leftban:hover p{
+        display: none;
+    }
+    .right{
+        width: 310px;
+        height: 300px;
+        margin-right: 2px;
+        float: left;
+        img{
+            width: 310px;
+            height: 300px;
+        }
+    }
+    .rightban{
+        width: 310px;
+        height: 300px;
+        position: absolute;
+        // background: blue;
+        left: 628px;
+        p{
+            font-size: 35px;
+            position: absolute;
+            bottom: 131x;
+            left: 106px;
+            color: #fff;
+            display: none;
+
+        }
+    }
+    .rightban:hover{
+        background: rgba(0, 0, 0, 0.38);
+        cursor: pointer;
+        transition: 1s;
+    }
+    .rightban:hover p{
+        display: block;
+    }
+
+}
+
+
+/* club */
+#club{
+    width: 100%;
+    height: 300px;
+    .block1{
+        width: 940px;
+        margin: 0 auto;
+        height: 300px;
+        position: relative;
+        .center{
+            img{
+                width: 940px;
+                height: 300px;
+            }
+        }
+        .centerban{
+            width: 940px;
+            height: 300px;
+            position: absolute;
+            // background: #666;
+            top: 0px;
+        }
+        .centerban:hover{
+            background: rgba(0, 0, 0, 0.5);
+            transition: 1s;
+            cursor: pointer;
+        }
+    }
+}
+
+/* competition */
+#_lxcompetition{
+    width: 940px;
+    height: 300px;
+    margin:50px auto;
+    position: relative;
+    .left{
+        width: 310px;
+        height: 300px;
+        margin-right: 8px;
+        float: left;
+        img{
+            width: 310px;
+            height: 300px;
+        }
+    }
+    .leftban{
+        width: 310px;
+        height: 300px;
+        position: absolute;
+        // background: pink;
+    }
+    .leftban:hover{
+        background: rgba(50, 0, 0, 0.5);
+        cursor: pointer;
+        transition: 1s;
+
+    }
+    .right{
+        width: 620px;
+        height: 300px;
+        margin-right: 2px;
+        float: left;
+        img{
+            width: 620px;
+            height: 300px;
+        }
+    }
+    .rightban{
+        width: 620px;
+        height: 300px;
+        position: absolute;
+        // background: blue;
+        left: 318px;
+    }
+    .rightban:hover{
+        background: rgba(50, 0, 0, 0.38);
+        cursor: pointer;
+        transition: 1s;
+    }
+
+}
+
+
+/* magazine */
+#_lxmagazine{
+    width: 100%;
+    height: 300px;
+    .block1{
+        width: 940px;
+        margin: 0 auto;
+        height: 300px;
+        position: relative;
+        .center{
+            img{
+                width: 940px;
+                height: 300px;
+            }
+        }
+        .centerban{
+            width: 940px;
+            height: 300px;
+            position: absolute;
+            // background: #666;
+            top: 0px;
+        }
+        .centerban:hover{
+            background: rgba(0, 0, 0, 0.5);
+            transition: 1s;
+            cursor: pointer;
+        }
+    }
+}
+
+/* subscribe */
+#_lxsubscribe{
+    height: 523px;
+    width: 100%;
+    background: url('../images/_lx_huyi.jpg');
+    background-size: cover;
+    margin: 50px 0;
+    .block2{
+        height: 523px;
+        width: 940px;
+        margin: 0 auto;
+        position: relative;
+        .yuyue{
+            width: 300px;
+            height: 167px;
+            padding: 20px 36px;
+            background: rgba(255,255,255,0.9);
+            position: absolute;
+            top:158px;
+            right: -4px;
+            border-radius: 10px;
+            box-shadow: 10px;
+            p{
+                font: normal 400 36px/1 "SimSun",serif;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-variant-numeric: normal;
+                font-variant-east-asian: normal;
+                font-weight: 400;
+                font-stretch: normal;
+                font-size: 36px;
+                line-height: 1;
+                font-family: SimSun, serif;
+            }
+            span{
+                margin-top: 21px;
+                display: inline-block;
+                color: #777777;
+            }
+            a{
+                color: #333333;
+                display: block;
+                margin-top: 36px;
+            }
+        }
+    }
+}
+
+/* share */
+
+#_lxshare{
+    position: relative;
+    top: -26px;
+    right: -1100px;
+    em{
+        font-style: normal;
+        color: #666666;
+    }
+    span{
+        font-size: 20px;
+        display: inline-block;
+        margin-right: 8px;
+    }
+}
+
+
+/* 运动 */
+#_lxyundong{
+    height: 300px;
+    width: 200px;
+    // background: darkturquoise;
+    position: absolute;
+    z-index: 99999999999999;
+    top: 417px;
+    right: -150px;
+    .box{
+        height: 100px;
+        width: 200px;
+        cursor: pointer;
+        .a{
+            height: 50px;
+            width: 50px;
+            background: rgb(201, 193, 195);
+            z-index: 999999999999999;
+            position: absolute;
+            font-size: 35px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .b{
+            height: 50px;
+            width: 200px;
+            background: rgb(27, 24, 26);
+            position: absolute;
+            border-radius: 25px 0 0 25px;
+            color:#fff;
+            text-align: center;
+            line-height: 50px;
+        }
+    }
+}
+
+#_lxbegin{
+    img{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index:9999999999999999999999999999999999;
+        // display: none;
+    }
+    p{
+        position: absolute;
+        bottom: 100px;
+        right: 150px;
+        font-size: 30px;
+        color: #fff;
+        z-index: 99999999999999999999999999999999999999999;
+        span{
+            color: #851515;
+            font-size: 35px;
+        }
+    }
+}

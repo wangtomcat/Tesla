@@ -18,14 +18,14 @@
 
   /**
    * SSR Window 1.0.1
-   * Better handling for window object in SSR environment
-   * https://github.com/nolimits4web/ssr-window
+   * Better handling for window object in SSR 
+   * 
    *
-   * Copyright 2018, Vladimir Kharlampidi
+   * 
    *
-   * Licensed under MIT
+   * 
    *
-   * Released on: July 18, 2018
+   * 
    */
   var doc = (typeof document === 'undefined') ? {
     body: {},
@@ -61,7 +61,7 @@
       };
     },
     location: { hash: '' },
-  } : document; // eslint-disable-line
+  } : document; 
 
   var win = (typeof window === 'undefined') ? {
     document: doc,
