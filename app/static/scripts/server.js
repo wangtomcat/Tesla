@@ -479,6 +479,25 @@ app.get('/forum', function (req, res) {
 
 });
 
+//查询论坛发表的信息
+app.get('/reforum', function (req, res) {
+    // console.log(req.query);
+    res.append("Access-Control-Allow-Origin", "*");
+    var connection = cont();
+    connection.connect(); // 执行连接
+    // 执行sql语句
+    connection.query(" select * from proposal ", function (error, results, fields) {
+        if (error) throw error;
+        // console.log('The solution is: ', results);
+        res.send({
+            status: "success"
+        });
+    });
+
+    connection.end(); // 关闭数据库
+
+});
+
 //注册普通用户
 app.get('/register', function (req, res) {
     // console.log(req.query);

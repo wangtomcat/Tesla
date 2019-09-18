@@ -12,7 +12,6 @@
                 var results = data.results;
                 if(results[0]){
                     setCookie('adminuser',results[0].username)
-                    alert('登录成功！！！');
                     window.open('./backstage.html','_self');
 
                 }else{

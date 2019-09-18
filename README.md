@@ -23,7 +23,7 @@
 ## 项目使用
 
 1. 使用 [npm install]() 即可安装该项目所需的环境及所依赖的插件
-2. 创建数据库，把目录下 tesla.sql 文件导入到 mysql 数据库中，即可创建该项目所需的数据库和数据表信息；
+2. 创建 tesla 数据库，把目录下 tesla.sql 文件导入到数据库中，即可创建该项目所需的数据库和数据表信息；
 ![数据库文件](https://github.com/wangtomcat/IMG/raw/master/tesla/teslamysql.png)
 
 ![导入数据](https://github.com/wangtomcat/IMG/raw/master/tesla/mysql.png)
