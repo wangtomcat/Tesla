@@ -5,7 +5,8 @@
 
 .L-bod{
     background: #F2F2F2;
-}
+    /* background: url(../images/L-2.jpg)   no-repeat  center */
+}  
 
 .L-register{
     display: block;
