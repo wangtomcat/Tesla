@@ -16,38 +16,14 @@ const minifyHtml = require('gulp-minify-html');
 // 压缩图片
 const imagemin = require('gulp-imagemin');
 
-// 编译sass
-const sass = require('gulp-sass');
-
-// 文件合并（js、css）
-const concat = require('gulp-concat');
-
-// 重命名
-const rename = require('gulp-rename');
-
 // ES6转ES5
 const babel = require('gulp-babel');
 
 // 错误处理提示
 const plumber = require('gulp-plumber');
 
-// 控制task中的串行和并行。（gulp默认是并行）
-// 串行是指多个任务时，各个任务按顺序执行，完成一个之后才能进行下一个。
-// 并行指的是多个任务可以同时执行。
-const runSequence = require('gulp-run-sequence');
-
 //压缩文件
 const zip = require('gulp-zip');
-
-// 删除文件
-const clean = require('gulp-clean');
-
-// 自动刷新
-var server = require('browser-sync').create();//执行函数返回对象
-
-// 自动加载
-// const load = require('gulp-load-plugins')();//立即执行之后得到一个加载对象
-
 
 // 创建任务
 gulp.task('js', function(){

@@ -510,7 +510,7 @@ app.get('/reforum', function (req, res) {
         if (error) throw error;
         // console.log('The solution is: ', results);
         res.send({
-            status: "success"
+            results
         });
     });
 

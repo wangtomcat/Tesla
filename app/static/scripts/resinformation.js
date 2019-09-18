@@ -1,24 +1,41 @@
 (function(){
+    var k_reg_info = document.createElement('p');
+    $(k_reg_info).attr('id','k_reg_info');
+    // $(k_reg_info).text('亲，请留下您的联系方式');
+    console.log(k_reg_info);
     
+    $('.k_name').before(k_reg_info);
+    $(k_reg_info).css({
+        "color":"#cc0000",
+        "font-size":"12px",
+        "margin-top":"-10px"
+    });
     $('#k_submit').click(function(){
+        $(k_reg_info).text('');
+
         // console.log($('.k_name').val());
         // console.log($('.k_sex').val());
         // console.log($('.k_phone').val());
         // console.log($('.k_address').val());
+        var k_reg = /^1[3-8]{1}\d{9}$/;
         if(!$('.k_phone').val()){
-            alert('亲，请留下您的联系方式');
+            $(k_reg_info).text('亲，请留下您的联系方式');
+            return;
+        }
+        if(!(k_reg.test( $('.k_phone').val() ) )){
+            $(k_reg_info).text('亲输入正确的手机号码');
             return;
         }
         if(!$('.k_sex').val()){
-            alert('亲问您是先生还是女士');
+            $(k_reg_info).text('亲问您是先生还是女士');
             return;
         }
         if(!$('.k_name').val()){
-            alert('亲，请留下您的尊姓大名');
+            $(k_reg_info).text('亲，请问尊姓大名');
             return;
         }
         if(!$('.k_address').val()){
-            alert('亲，请留下您打算购车的城市');
+            $(k_reg_info).text('亲，请留下您打算购车的城市');
             return;
         }
         $.ajax({

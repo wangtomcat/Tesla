@@ -1,0 +1,49 @@
+
+
+
+
+
+.L-bod{
+    background: #F2F2F2;
+    /* background: url(../images/L-2.jpg)   no-repeat  center */
+}  
+
+.L-register{
+    display: block;
+    margin:120px auto;
+    width: 390px;
+  
+}
+
+.L-register h2{
+   font-size: 28px;
+   line-height: 36px;
+   font-weight: 800px;
+}
+.L-row span{
+    display: none;
+    color: red
+}
+/* form{
+    margin:100px auto;
+    margin-left: 100px;
+} */
+.L-ipt{
+    width: 390px;
+    height: 35px;
+    margin-top:6px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    color:#999;
+}
+
+.L-ipt:hover{
+    
+    border: 1px solid #333;
+}
+
+.L-push{
+    background-color: #347FEB;
+    color: white;
+
+}
