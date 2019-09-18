@@ -51,7 +51,18 @@ $('#resinfo_list').on('click','#resinfo_edit',function(){
 });
 
 $('#resinfo_list').on('click','#resinfo_delete',function(){
-    alert('123');
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:3000/resinfoDelete",
+        data: {
+            name: $(this).parent().parent().children().eq(1).text()
+        },
+        success: function (data) {
+            // console.log(data);
+            alert('该预约信息已删除！');
+            load();
+        }
+    });
     
 });
 

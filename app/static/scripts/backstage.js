@@ -26,6 +26,7 @@
     $('.w_exit').click(function(){
         removeCookie('adminuser');
         window.open('./adminlogin.html','_self');
+        removeCookie('w_pre');
     });
 
 

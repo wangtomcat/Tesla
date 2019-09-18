@@ -1,5 +1,5 @@
 {
-  "name": "Tesla",
+  "name": "tesla",
   "version": "1.0.0",
   "description": "1. 项目名称：[特斯拉非官方官网](https://github.com/wangtomcat/Tesla.git)\r 2. 运行环境：[nodejs](http://nodejs.cn/)    [npm](https://www.npmjs.cn/) npm会随着node安装集成在里面，所以不需要安装npm\r 3. 第三方插件：[express](http://www.expressjs.com.cn/) + [mysql]() 使用这两个第三方插件都是通过 npm install express(mysql)安装的，本地数据库则使用了[wamp]()中集成的mysql数据库；",
   "main": "index.js",

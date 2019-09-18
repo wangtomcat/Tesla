@@ -168,6 +168,26 @@ app.get('/resinfoEdit', function (req, res) {
 
 });
 
+//删除预约信息
+app.get('/resinfoDelete', function (req, res) {
+    // console.log(req.query);
+    res.append("Access-Control-Allow-Origin", "*");
+    var connection = cont();
+    connection.connect(); // 执行连接
+    // 执行sql语句
+    var name = req.query.name;  
+    connection.query("delete from resinfo where name='"+ name +"'", function (error, results, fields) {
+        if (error) throw error;
+        // console.log('The solution is: ', results);
+        res.send({
+            status: "success"
+        });
+    });
+
+    connection.end(); // 关闭数据库
+
+});
+
 //购车订单
 app.get('/buycar', function (req, res) {
     // console.log(req.query);
@@ -251,7 +271,7 @@ app.get('/proposal', function (req, res) {
 
 //改变意见信息状态
 app.get('/proposalDelete', function (req, res) {
-    console.log(req.query);
+    // console.log(req.query);
     res.append("Access-Control-Allow-Origin", "*");
     var connection = cont();
     connection.connect(); // 执行连接

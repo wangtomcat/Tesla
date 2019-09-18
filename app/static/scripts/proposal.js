@@ -42,7 +42,7 @@ $('#proposal_list').on('click','#proposal_delete',function(){
             alert('该条意见信息已删除！');
             load();
         }
-    })
+    });
 });
 
 // $('#proposal_list').on('click','#proposal_delete',function(){
