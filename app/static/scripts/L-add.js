@@ -53,7 +53,7 @@ $(function(){
     
     console.log($('.L-ipt').eq(num + 3));
 /*---------------------------------------- 向服务器发送数据------------------------------------------------------ */
-    var L_flag2 = 0;
+    var L_flag = 0;
 
     $('.L-ipt').eq(0).blur(function () {
         $.ajax({
@@ -66,10 +66,10 @@ $(function(){
                 var results = data.results;
                 // console.log(results);
                 if (results[0]) {
-                    L_flag2 = 0;
+                    L_flag = 0;
                     alert('你输入的用户名已存在！！！');
                 } else {
-                    L_flag2 = 1;
+                    L_flag = 1;
                 }
             }
         })
@@ -98,22 +98,26 @@ $(function(){
         }
     }
 
-       
-    $.ajax({
-        type:"GET",
-        url:"http://localhost:3000/register",
-       
-        data: {
-            username: $('.L-ipt').eq(0).val(),
-            password: $('.L-ipt').eq( 1).val(),
-            phone: $('.L-ipt').eq(2).val(),
-        },
-        success:function(data){
-            
-            alert('注册成功')
-            window.open('../views/index.html', '_blank');
-        }
-    });
+    if(L_flag == 1){
+
+        $.ajax({
+            type:"GET",
+            url:"http://localhost:3000/register",
+           
+            data: {
+                username: $('.L-ipt').eq(0).val(),
+                password: $('.L-ipt').eq( 1).val(),
+                phone: $('.L-ipt').eq(2).val(),
+            },
+            success:function(data){
+                
+                alert('注册成功')
+                window.open('../views/index.html', '_blank');
+            }
+        });
+    }else{
+        alert('请输入正确的用户名！！！');
+    } 
 
 })
 
