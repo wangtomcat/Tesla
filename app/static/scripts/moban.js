@@ -31,6 +31,7 @@ if (getCookie('logflag')=='1') {
     },200);
 }
 
+
 //退出登陆功能
 function logoutstuff() {
 
@@ -81,6 +82,7 @@ function logoutstuff() {
             },100);
             $('#login').text("登陆");
             $(unlogin).unbind();
+            removeCookie('orduser');
         });
 
     }
@@ -108,6 +110,10 @@ function getCookie(key) {
         }
     }
     return null;
+}
+
+function removeCookie(key){
+    setCookie(key,'123',-10);
 }
 
 //登录功能

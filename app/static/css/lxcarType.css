@@ -157,11 +157,14 @@
   width: 100%;
   margin-top: 40px;
   margin-bottom: 20px;
+  text-align: center;
 }
 #iconfont .tool {
   width: 890px;
   height: 96px;
   margin: 0 208px;
+  display: inline-block;
+  margin-right: 416px;
 }
 #iconfont .tool div {
   width: 220px;

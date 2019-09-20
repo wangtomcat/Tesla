@@ -11,7 +11,7 @@ const uglify = require('gulp-uglify');
 const minifyCss = require('gulp-minify-css');
 
 // 压缩html
-const minifyHtml = require('gulp-minify-html');
+// const minifyHtml = require('gulp-minify-html');
 
 // 压缩图片
 const imagemin = require('gulp-imagemin');
@@ -28,9 +28,10 @@ const zip = require('gulp-zip');
 // 创建任务
 gulp.task('js', function(){
     // 取得scripts下的所有为.js的文件（**/的意思是包含所有子文件夹)
-    gulp.src('app/static/scripts/lx_carType.js')
+    gulp.src('app/static/scripts/**/*.js')
     //错误管理模块（有错误时会自动输出提示到终端上）
     .pipe(plumber())
+    .pipe(babel({ presets: ['@babel/preset-env']}))
     //合并同一目录下的所有文件,并指定文件名
     // .pipe(concat('.js'))
     //js压缩
@@ -39,20 +40,18 @@ gulp.task('js', function(){
     .pipe(gulp.dest('dist/static/scripts'))
 });
 
-// gulp.task('sass', function(){
-//     // 取得sass下的所有为.scss的文件（**/的意思是包含所有子文件夹)
-//     gulp.src('app/static/sass/**/*.scss')
-//     //错误管理模块（有错误时会自动输出提示到终端上）
-//     .pipe(plumber())
-//     //编译sass文件使其转换为css文件
-//     .pipe(sass())
-//     //合并同一目录下的所有文件,并指定文件名
-//     .pipe(concat('main.css'))
-//     //css压缩
-//     .pipe(minifyCss())
-//     //将合并压缩后的文件输出到dist/static/css下（假如没有dist目录则自动生成dist目录）
-//     .pipe(gulp.dest('dist/static/css'))
-// });
+gulp.task('css', function(){
+    // 取得sass下的所有为.scss的文件（**/的意思是包含所有子文件夹)
+    gulp.src('app/static/css/**/*.css')
+    //错误管理模块（有错误时会自动输出提示到终端上）
+    .pipe(plumber())
+    //合并同一目录下的所有文件,并指定文件名
+    // .pipe(concat('main.css'))
+    //css压缩
+    .pipe(minifyCss())
+    //将合并压缩后的文件输出到dist/static/css下（假如没有dist目录则自动生成dist目录）
+    .pipe(gulp.dest('dist/static/css'))
+});
 
 gulp.task('html', function(){
     // 首先取得app/views下的所有为.html的文件（**/的意思是包含所有子文件夹)
@@ -60,7 +59,7 @@ gulp.task('html', function(){
     //错误管理模块（有错误时会自动输出提示到终端上）
     .pipe(plumber())
     //html压缩
-    .pipe(minifyHtml())
+    // .pipe(minifyHtml())
     //将压缩后的文件输出到dist/views下（假如没有dist目录则自动生成dist目录）
     .pipe(gulp.dest('dist/views'))
 });
@@ -85,39 +84,18 @@ gulp.task('images', function(){
     .pipe(gulp.dest('dist/static/images'))
 });
 
-// gulp.task('clean', function(){
-//     // 首先取得dist/*下的所有文件,read: false 返回空值，也就是并不会去读取文件
-//     gulp.src('dist/*', {read: false})
-//     //删除dist/*下的所有文件
-//     .pipe(clean())
-// })
-
 gulp.task('build', function(){
     // 首先取得dist/*下的所有文件
     gulp.src('dist/*')
     //错误管理模块（有错误时会自动输出提示到终端上）
     .pipe(plumber())
     //将dist/*下的所有文件进行压缩打包生成为build.zip文件
-    .pipe(zip('lxbuild.zip'))
+    .pipe(zip('build.zip'))
     //将生成的build.zip文件输出到build下（假如没有build目录则自动生成build目录）
     .pipe(gulp.dest('build'))
 })
 
-gulp.task('watch', function(){
-    //监听各个目录的文件，如果有变动则执行相应的任务操作文件
-    gulp.watch('app/static/scripts/**/*.js',['js']);
-    gulp.watch('app/static/sass/**/*.sass',['sass']);
-    gulp.watch('app/views/**/*.html',['html']);
-})
-
-gulp.task('redist', function(){
-    //先运行clean，然后并行运行html,js,sass,images,watch
-    //如果不使用gulp-run-sequence插件的话，由于gulp是并行执行的
-    //有可能会出现一种情况（其他文件处理速度快的已经处理完了，然后clean最后才执行，会把前面处理完的文件删掉，所以要用到runSequence）
-    runSequence(['html', 'js', 'images'],'watch')
-})
-
 //在终端上输入gulp命令，会默认执行default任务，并执行redist任务
-gulp.task('default', ['redist']);
+gulp.task('default', ['js','css','html','images']);
 
 
